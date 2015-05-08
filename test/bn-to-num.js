@@ -14,3 +14,17 @@ test('two words', function(t) {
   t.equal(toFloat(new bn(-v)), -v, 'negative');
   t.end();
 });
+
+test('more words (base 10)', function(t) {
+  var n = new bn('1234567123456712345671234567', 10);
+  var v = toFloat(n);
+  t.equal(v, +n.toString(), 'positive')
+  t.end();
+});
+
+test('more words (base 16)', function(t) {
+  var n = new bn('1234567123456712345671234567', 16);
+  var v = toFloat(n);
+  t.equal(v, +n.toString(), 'positive')
+  t.end();
+});
