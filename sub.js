@@ -2,7 +2,9 @@
 
 var rationalize = require('./rationalize')
 
-function add(a, b) {
+module.exports = sub
+
+function sub(a, b) {
   var n = a.length
   var r = new Array(n)
   var wa = a[n-1]

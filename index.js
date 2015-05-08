@@ -4,6 +4,7 @@ module.exports = float2rat
 
 var bn = require('./lib/bn')
 var db = require('double-bits')
+var rationalize = require('./rationalize')
 
 function float2rat(v) {
   var n = v.length
@@ -19,5 +20,5 @@ function float2rat(v) {
     r[i] = bn(v[i]*f)
   }
   r[n] = bn(f)
-  return r
+  return rationalize(r)
 }

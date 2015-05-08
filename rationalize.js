@@ -2,6 +2,8 @@
 
 var bn = require('bn.js')
 
+module.exports = rationalize
+
 function rationalize(v) {
   var d = v[0]
   for(var i=1; i<v.length; ++i) {

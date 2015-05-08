@@ -2,6 +2,8 @@
 
 var rationalize = require('./rationalize')
 
+module.exports = add
+
 function add(a, b) {
   var n = a.length
   var r = new Array(n)
