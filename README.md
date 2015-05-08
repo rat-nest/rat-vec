@@ -22,6 +22,46 @@ npm i rat-vec
 
 # API
 
+#### `var r = require('rat-vec')(v)`
+Converts a vector of `n` floating point numbers into an exact rational vector of `n+1` big ints.
+
+* `v` is a vector of floats
+
+**Returns** A rational vector of big integers
+
+#### `var v = require('rat-vec/to-float')(r)`
+Round a rational vector of big integers into an approximate vector of floats.
+
+* `r` is a vector of `n+1` big integers
+
+**Returns** A vector of `n` floats representing the closest representable vector
+
+#### `var s = require('rat-vec/add')(a, b)`
+Performs per-component vector addition on `a` and `b`
+
+* `a` is a rational vector
+* `b` is a rational vector
+
+**Returns** The sum of `a` and `b`
+
+#### `var d = require('rat-vec/sub')(a, b)`
+Performs per-component vector subtraction on `a` and `b`
+
+* `a` is a rational vector
+* `b` is a rational vector
+
+#### `require('rat-vec/rationalize')(r)`
+Rationalizes a vector, canceling out common factors
+
+# TODO
+
+* Scalar multiplication
+* Dot product
+* Interpolation
+* Comparison (per-component)
+* Maximum (per-component)
+* Minimum (per-component)
+* Multiply (per-component)
 
 # Credits
 
