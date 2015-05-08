@@ -1,0 +1,32 @@
+{
+  "name": "rat-vec",
+  "version": "1.0.0",
+  "description": "Exact rational vector arithmetic",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikolalysenko/rat-vec.git"
+  },
+  "keywords": [
+    "rational",
+    "vector",
+    "exact",
+    "arithmetic",
+    "geometry"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/rat-vec/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/rat-vec#readme",
+  "dependencies": {
+    "bn.js": "^2.0.4"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
+}
