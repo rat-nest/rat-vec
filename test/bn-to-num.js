@@ -15,16 +15,16 @@ test('two words', function(t) {
   t.end();
 });
 
-test('more words (base 10)', function(t) {
+test('more words (positive)', function(t) {
   var n = new bn('1234567123456712345671234567', 10);
   var v = toFloat(n);
   t.equal(v, +n.toString(), 'positive')
   t.end();
 });
 
-test('more words (base 16)', function(t) {
-  var n = new bn('1234567123456712345671234567', 16);
+test('more words (negative)', function(t) {
+  var n = new bn('-1234567123456712345671234567', 10);
   var v = toFloat(n);
-  t.equal(v, +n.toString(), 'positive')
+  t.equal(v, +n.toString(), 'negative')
   t.end();
 });
