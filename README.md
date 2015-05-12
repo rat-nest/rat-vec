@@ -75,6 +75,9 @@ Linearly interpolate between `a` and `b` with parameter `t`
 #### `var c = require('rat-vec/cmp')(a, b)`
 Compares the components of `a` and `b`, returns an array of `0,+1,-1` whose components are the result of comparing each value.
 
+#### `var eq = require('rat-vec/equals')(a, b)`
+Test if two rational vectors are equal.
+
 #### `var h = require('rat-vec/max')(a, b)`
 Computes the component-wise maximum of `a` and `b`
 
@@ -97,8 +100,7 @@ Rationalizes a vector, canceling out common factors
 
 # TODO
 
-* Multiply (per-component)
-* Divide (per-component)
+* More testing
 * Other functions?
 
 # Credits
