@@ -72,9 +72,11 @@ Divides a rat vec by a scalar
 #### `var lerp = require('rat-vec/lerp')(a, b, t)`
 Linearly interpolate between `a` and `b` with parameter `t`
 
+#### `var c = require('rat-vec/cmp')(a, b)`
+Compares the components of `a` and `b`, returns an array of `0,+1,-1` whose components are the result of comparing each value.
+
 #### `require('rat-vec/rationalize')(r)`
 Rationalizes a vector, canceling out common factors
-
 
 # TODO
 
