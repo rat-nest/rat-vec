@@ -75,15 +75,22 @@ Linearly interpolate between `a` and `b` with parameter `t`
 #### `var c = require('rat-vec/cmp')(a, b)`
 Compares the components of `a` and `b`, returns an array of `0,+1,-1` whose components are the result of comparing each value.
 
+#### `var h = require('rat-vec/max')(a, b)`
+Computes the component-wise maximum of `a` and `b`
+
+#### `var l = require('rat-vec/min')(a, b)`
+Computes the component-wise minimum of `a` and `b`
+
 #### `require('rat-vec/rationalize')(r)`
 Rationalizes a vector, canceling out common factors
 
+**TODO** Should this be public?
+
 # TODO
 
-* Comparison (per-component)
-* Maximum (per-component)
-* Minimum (per-component)
 * Multiply (per-component)
+* Divide (per-component)
+* Other functions?
 
 # Credits
 
