@@ -87,6 +87,9 @@ Computes the component-wise product of `a` and `b`
 #### `var r = require('rat-mul/recip')(a)`
 Computes the component-wise reciprocal of `a`
 
+#### `var q = require('rat-mul/div')(a, b)`
+Computes the component-wise quotient of `a` and `b`
+
 #### `require('rat-vec/rationalize')(r)`
 Rationalizes a vector, canceling out common factors
 
