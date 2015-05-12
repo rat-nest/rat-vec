@@ -4,6 +4,10 @@ Exact rational vector arithmetic.
 
 <img src="img/rat.jpg">
 
+rat-vec is *slow* but reliable.  You can use it to get quickly and reliably
+implement geometric algorithms, then go back and smash your head into a wall
+trying to optimize them with filters and predicates and snap rounding and so on.
+
 # Example
 
 ```javascript
@@ -12,6 +16,11 @@ var vec = require('rat-vec')
 var toFloat = require('rat-vec/to-float')
 
 var add = require('rat-vec/add')
+
+var sub = require('rat-vec/sub')
+
+var dot = require('rat-vec/sub')
+
 ```
 
 # Install
@@ -50,14 +59,25 @@ Performs per-component vector subtraction on `a` and `b`
 * `a` is a rational vector
 * `b` is a rational vector
 
+
+#### `var f = require('rat-vec/dot')(a, b)`
+Computes the dot product of `a` and `b` returning a 1d rational vector.
+
+#### `var v = require('rat-vec/muls')(a, s)`
+Multiplies a rat vec by a scalar
+
+#### `var v = require('rat-vec/divs')(a, s)`
+Divides a rat vec by a scalar
+
+#### `var lerp = require('rat-vec/lerp')(a, b, t)`
+Linearly interpolate between `a` and `b` with parameter `t`
+
 #### `require('rat-vec/rationalize')(r)`
 Rationalizes a vector, canceling out common factors
 
+
 # TODO
 
-* Scalar multiplication
-* Dot product
-* Interpolation
 * Comparison (per-component)
 * Maximum (per-component)
 * Minimum (per-component)

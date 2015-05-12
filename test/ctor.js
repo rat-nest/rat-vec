@@ -7,7 +7,7 @@ var round = require('../to-float')
 tape('exact rational', function(t) {
 
   function verify(v) {
-    t.same(round(rv(v)), v)
+    t.equals(round(rv(v)).toString(), v.toString(), 'verify: ' + v.toString())
   }
 
   verify([Math.pow(2,1023)])
@@ -34,7 +34,7 @@ tape('exact rational', function(t) {
     verify([x])
     verify([x + Math.pow(2,i-52)])
     verify([x*Math.random()])
-    for(var j=-1070; j<1024; ++j) {
+    for(var j=-1070; j<1024; j+=32) {
       var y = Math.pow(2, j)
       verify([x, y])
       verify([x + Math.pow(2,i-52), y])
