@@ -84,6 +84,9 @@ Computes the component-wise minimum of `a` and `b`
 #### `var p = require('rat-vec/mul')(a, b)`
 Computes the component-wise product of `a` and `b`
 
+#### `var r = require('rat-mul/recip')(a)`
+Computes the component-wise reciprocal of `a`
+
 #### `require('rat-vec/rationalize')(r)`
 Rationalizes a vector, canceling out common factors
 
