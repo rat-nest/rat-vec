@@ -2,7 +2,6 @@ var test = require('tape');
 var recip = require('../recip')
 var cmp = require('../cmp')
 var rv = require('../index');
-var float = require('../to-float');
 
 test('recip of 1/2 is 2', function(t) {
   var a = rv([1/2])
