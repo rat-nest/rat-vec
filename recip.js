@@ -1,6 +1,6 @@
 'use strict'
 
-var rationalize = require('rationalize')
+var rationalize = require('./rationalize')
 
 module.exports = recip
 
@@ -17,9 +17,13 @@ function recip(a) {
       }
     }
   }
+
   r[n] = a[0]
-  for(var i=0; i<n; ++i) {
-    r[n] = r[n].mul(a[i])
+
+  if (n !== 1) {
+    for(var i=0; i<n; ++i) {
+      r[n] = r[n].mul(a[i])
+    }
   }
   return rationalize(r)
 }
