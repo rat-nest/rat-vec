@@ -3,12 +3,20 @@ var cmp = require('../cmp')
 var div = require('../div')
 var rv = require('../index');
 
-test('ensure equal is 0', function(t) {
-  var a = rv([3, 4])
-  var b = rv([1, 8]);
+test('(1/5) / (1/2) == 2/5', function(t) {
+  var a = rv([1/5]);
+  var b = rv([1/2]);
+  var c = rv([2/5]);
 
-  console.log(div(a, b));
+  t.deepEqual(cmp(div(a, b), c), [0], '[0, 0]');
+  t.end();
+});
 
-  t.deepEqual(cmp(a, b), [0, 0], '[0, 0]');
+test('(1/2) / (1/2) == 1', function(t) {
+  var a = rv([1/2]);
+  var b = rv([1/2]);
+  var c = rv([1]);
+
+  t.deepEqual(cmp(div(a, b), c), [0], '[0, 0]');
   t.end();
 });
