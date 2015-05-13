@@ -67,7 +67,7 @@ Computes the dot product of `a` and `b` returning a 1d rational vector.
 Multiplies a rat vec by a scalar
 
 #### `var v = require('rat-vec/divs')(a, s)`
-Divides a rat vec by a scalar
+Divides a rat vec by a scalar or rat (e.g. `require('rat-vec')([1/2])`)
 
 #### `var lerp = require('rat-vec/lerp')(a, b, t)`
 Linearly interpolate between `a` and `b` with parameter `t`
