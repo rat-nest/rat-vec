@@ -15,6 +15,8 @@ tape('round-rational', function(t) {
   t.equals(roundRat(new BN(1), new BN(-1)), -1)
   t.equals(roundRat(new BN(-1), new BN(-1)), 1)
   t.equals(roundRat(new BN(1), new BN(-4)), -0.25)
+  t.equals(roundRat(new BN(-25), new BN(10)), -2.5)
+  t.equals(roundRat(new BN(25), new BN(10)), 2.5)
 
   var pattern = (new BN(1)).add((new BN(1)).shln(32)).add((new BN(1)).shln(52))
 
