@@ -64,7 +64,7 @@ Performs per-component vector subtraction on `a` and `b`
 Computes the dot product of `a` and `b` returning a 1d rational vector.
 
 #### `var v = require('rat-vec/muls')(a, s)`
-Multiplies a rat vec by a scalar
+Multiplies a rat vec by a scalar or rat (e.g. `require('rat-vec')([1/2])`)
 
 #### `var v = require('rat-vec/divs')(a, s)`
 Divides a rat vec by a scalar or rat (e.g. `require('rat-vec')([1/2])`)
