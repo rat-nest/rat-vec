@@ -18,6 +18,6 @@ test('(.5, 0, 0) dot (100.125, 0, 50.2)', function(t) {
   var b = rv([100.125, 0, 50.2]);
   var c = rv([tobn(801), tobn(16)]);
 
-  t.deepEqual(cmp(dot(a, b), c), [0], 'equals rat(800/16)');
+  t.deepEqual(cmp(dot(a, b), c), [0], 'equals rat(801/16)');
   t.end();
 });
