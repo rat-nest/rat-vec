@@ -4,7 +4,6 @@ var tape = require('tape')
 var rv = require('../index')
 var equal = require('../equal')
 var max = require('../max')
-var float = require('../to-float');
 
 tape('2d max (positive)', function(t) {
   var a = rv([10, 100]);
