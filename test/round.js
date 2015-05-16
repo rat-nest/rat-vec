@@ -20,7 +20,7 @@ tape('round-rational', function(t) {
 
   var pattern = (new BN(1)).add((new BN(1)).shln(32)).add((new BN(1)).shln(52))
 
-  for(var i=0; i<1075+52; ++i) {
+  for(var i=0; i<1024+52; ++i) {
     var numer = new BN(1)
     var denom = (new BN(1)).shln(i)
     t.equals(roundRat(numer, denom), Math.pow(2,-i), 'n=2^-' + i)
