@@ -93,10 +93,11 @@ Computes the component-wise reciprocal of `a`
 #### `var q = require('rat-mul/div')(a, b)`
 Computes the component-wise quotient of `a` and `b`
 
-#### `require('rat-vec/rationalize')(r)`
-Rationalizes a vector, canceling out common factors
+#### `var s = require('rat-vec/getc')(v, i)`
+Returns the `i`th component of `v`
 
-**TODO** Should this be public?
+#### `var v = require('rat-vec/setc')(v, i, s)`
+Returns a copy of `v` whose `i`th component is `s`
 
 # TODO
 
