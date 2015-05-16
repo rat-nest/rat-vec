@@ -5,7 +5,6 @@ module.exports = float2rat
 var BN = require('bn.js')
 var db = require('double-bits')
 var num2bn = require('./lib/num-to-bn')
-var shiftFloat = require('./lib/shift-float')
 var rationalize = require('./lib/rationalize')
 
 function float2rat(v) {
@@ -17,7 +16,6 @@ function float2rat(v) {
     }
   }
   lcm = -lcm
-  console.log(lcm)
 
   var r = new Array(n+1)
   var denom = (new BN(1)).shln(lcm)
@@ -31,7 +29,18 @@ function float2rat(v) {
     } else if(x === Math.floor(x)) {
       r[i] = num2bn(x).shln(lcm)
     } else {
-      r[i] = num2bn(shiftFloat(x, lcm))
+      var y = x
+      var shift = lcm
+      while(y !== Math.floor(y)) {
+        if(shift > 512) {
+          y *= Math.pow(2, 512)
+          shift -= 512
+        } else {
+          y *= Math.pow(2, shift)
+          shift = 0
+        }
+      }
+      r[i] = num2bn(y).shln(shift)
     }
   }
   r[n] = denom

@@ -10,6 +10,11 @@ tape('exact rational', function(t) {
     t.equals(round(rv(v)).toString(), v.toString(), 'verify: ' + v.toString())
   }
 
+  verify([5e-324, 1.4210854715202004e-14])
+  verify([0, 3.2159095049723066e-24])
+  verify([5e-324, 4.04007015999455e-25])
+  verify([5e-324,4.830474736584587e-26])
+
   verify([Math.pow(2,1023)])
   verify([Math.pow(2,-1074)])
   verify([Math.pow(2,-1074), Math.pow(2,1023)])
