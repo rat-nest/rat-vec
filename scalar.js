@@ -37,7 +37,7 @@ function makeRational(numer, denom) {
   } else {
     while(denom !== Math.floor(denom)) {
       denom = denom * Math.pow(2, 256)
-      shift -= 256
+      shift += 256
     }
     b = num2bn(denom)
   }

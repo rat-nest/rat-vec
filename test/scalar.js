@@ -20,6 +20,14 @@ tape('simple constructor', function(t) {
   t.equal(y[0].toString(), '0')
   t.equal(y[1].toString(), '1')
 
+  y = frac(0.5)
+  t.equal(y[0].toString(), '1')
+  t.equal(y[1].toString(), '2')
+
+  y = frac(1, 0.5)
+  t.equal(y[0].toString(), '2')
+  t.equal(y[1].toString(), '1')
+
   t.end()
 })
 
