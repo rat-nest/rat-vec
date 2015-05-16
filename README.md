@@ -8,6 +8,8 @@ rat-vec is *slow* but reliable.  You can use it to get quickly and reliably
 implement geometric algorithms, then go back and smash your head into a wall
 trying to optimize them with filters and predicates and snap rounding and so on.
 
+This library is built on top of [bn.js](https://github.com/indutny/bn.js/)
+
 # Example
 
 ```javascript
@@ -34,9 +36,17 @@ npm i rat-vec
 #### `var r = require('rat-vec')(v)`
 Converts a vector of `n` floating point numbers into an exact rational vector of `n+1` big ints.
 
-* `v` is a vector of floats
+* `v` is a vector of floats, rationals or strings
 
 **Returns** A rational vector of big integers
+
+#### `var s = require('rat-vec/scalar')(numer, denom)`
+Constructs a rational scalar
+
+* `numer` is the numerator
+* `denom` is the denominator
+
+**Returns** A rational number encoded as a pair of bignumbers
 
 #### `var v = require('rat-vec/to-float')(r)`
 Round a rational vector of big integers into an approximate vector of floats.
