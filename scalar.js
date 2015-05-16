@@ -3,7 +3,7 @@
 var BN = require('bn.js')
 var num2bn = require('./lib/num-to-bn')
 var rationalize = require('./lib/rationalize')
-
+var isBN = require('./lib/is-bn');
 module.exports = makeRational
 
 function makeRational(numer, denom) {
