@@ -103,10 +103,10 @@ Computes the component-wise reciprocal of `a`
 #### `var q = require('rat-mul/div')(a, b)`
 Computes the component-wise quotient of `a` and `b`
 
-#### `var s = require('rat-vec/getc')(v, i)`
+#### `var s = require('rat-vec/get')(v, i)`
 Returns the `i`th component of `v`
 
-#### `var v = require('rat-vec/setc')(v, i, s)`
+#### `var v = require('rat-vec/set')(v, i, s)`
 Returns a copy of `v` whose `i`th component is `s`
 
 # TODO
