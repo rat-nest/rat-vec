@@ -2,7 +2,6 @@
 
 var BN = require('bn.js')
 var num2bn = require('./lib/num-to-bn')
-var shiftFloat = require('./lib/shift-float')
 var rationalize = require('./lib/rationalize')
 
 module.exports = makeRational
@@ -23,8 +22,11 @@ function makeRational(numer, denom) {
   } else if(numer === Math.floor(numer)) {
     a = num2bn(numer)
   } else {
-    a = num2bn(shiftFloat(numer, 1080))
-    shift -= 1080
+    while(numer !== Math.floor(numer)) {
+      numer = numer * Math.pow(2, 256)
+      shift -= 256
+    }
+    a = num2bn(numer)
   }
   if(typeof denom === 'string') {
     b = new BN(denom)
@@ -33,8 +35,11 @@ function makeRational(numer, denom) {
   } else if(denom === Math.floor(denom)) {
     b = num2bn(denom)
   } else {
-    b = num2bn(shiftFloat(denom, 1080))
-    shift += 1080
+    while(denom !== Math.floor(denom)) {
+      denom = denom * Math.pow(2, 256)
+      shift -= 256
+    }
+    b = num2bn(denom)
   }
   if(shift > 0) {
     a = a.shln(shift)
