@@ -2,10 +2,10 @@
 
 var muls = require('./muls')
 var add = require('./add')
+var sub = require('./sub')
 
 module.exports = lerp
 
 function lerp(a, b, t) {
-  var ti = [ t[1].sub(t[0]), t[0] ]
-  return add(muls(a, ti), muls(b, t))
+  return add(a, muls(sub(b, a), t));
 }
