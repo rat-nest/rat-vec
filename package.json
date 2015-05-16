@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikolalysenko/rat-vec.git"
+    "url": "git+https://github.com/rat-nest/rat-vec.git"
   },
   "keywords": [
     "rational",
@@ -20,9 +20,9 @@
   "author": "Mikola Lysenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikolalysenko/rat-vec/issues"
+    "url": "https://github.com/rat-nest/rat-vec/issues"
   },
-  "homepage": "https://github.com/mikolalysenko/rat-vec#readme",
+  "homepage": "https://github.com/rat-nest/rat-vec#readme",
   "dependencies": {
     "bit-twiddle": "^1.0.2",
     "bn.js": "^2.0.4",
