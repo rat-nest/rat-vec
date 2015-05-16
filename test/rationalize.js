@@ -3,7 +3,7 @@
 var tape = require('tape')
 var rv = require('../index')
 var equal = require('../equal')
-var rationalize = require('../rationalize')
+var rationalize = require('../lib/rationalize')
 
 tape('reduces', function(t) {
   var a = rv([8/16, 16/128])
