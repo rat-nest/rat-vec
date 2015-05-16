@@ -15,7 +15,9 @@ function makeRational(numer, denom) {
   }
   var shift = 0
   var a, b
-  if(typeof numer === 'string') {
+  if(isBN(numer)) {
+    a = numer
+  } else if(typeof numer === 'string') {
     a = new BN(numer)
   } else if(numer === 0) {
     return [new BN(0), new BN(1)]
@@ -28,7 +30,9 @@ function makeRational(numer, denom) {
     }
     a = num2bn(numer)
   }
-  if(typeof denom === 'string') {
+  if(isBN(denom)) {
+    b = denom
+  } else if(typeof denom === 'string') {
     b = new BN(denom)
   } else if(!denom) {
     b = num2bn(1)

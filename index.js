@@ -4,6 +4,7 @@ module.exports = float2rat
 
 var BN = require('bn.js')
 var db = require('double-bits')
+var isBN = require('./lib/is-bn')
 var num2bn = require('./lib/num-to-bn')
 var rationalize = require('./lib/rationalize')
 
@@ -21,7 +22,9 @@ function float2rat(v) {
   var denom = (new BN(1)).shln(lcm)
   for(var i=0; i<n; ++i) {
     var x = v[i]
-    if(typeof x === 'string') {
+    if(isBN(x)) {
+      r[i] = x
+    } else if(typeof x === 'string') {
       r[i] = (new BN(x)).shln(lcm)
     } else if(Array.isArray(x)) {
       r[i] = x[0]
