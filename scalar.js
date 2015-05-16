@@ -8,8 +8,8 @@ var rationalize = require('./lib/rationalize')
 module.exports = makeRational
 
 function makeRational(numer, denom) {
-  if(typeof numer === 'array') {
-    if(typeof denom === 'array') {
+  if(Array.isArray(numer)) {
+    if(Array.isArray(denom)) {
       return rationalize([numer[0].mul(denom[1]), numer[1].mul(denom[0])])
     }
     return numer
