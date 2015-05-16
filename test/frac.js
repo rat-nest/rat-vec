@@ -3,7 +3,7 @@
 var tape = require('tape')
 var rv = require('../index')
 var equal = require('../equal')
-var frac = require('../lib/frac')
+var frac = require('../scalar')
 var round = require('../lib/round-rat')
 var bn = require('../lib/num-to-bn');
 
