@@ -40,6 +40,16 @@ Converts a vector of `n` floating point numbers into an exact rational vector of
 
 **Returns** A rational vector of big integers
 
+
+#### `var r = require('rat-vec/vec')(v)`
+Converts a vector of `n` floating rationals into an exact rational vector of `n+1` big ints.
+
+You can create rational number from floating point number with the `scalar` function below.
+
+* `v` is a vector of rationals
+
+**Returns** A rational vector of big integers
+
 #### `var s = require('rat-vec/scalar')(numer, denom)`
 Constructs a rational scalar
 
