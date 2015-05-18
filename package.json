@@ -17,7 +17,10 @@
     "arithmetic",
     "geometry"
   ],
-  "author": "Mikola Lysenko",
+  "authors": [
+    "Mikola Lysenko",
+    "Elijah Insua"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rat-nest/rat-vec/issues"
