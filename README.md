@@ -42,6 +42,9 @@ Converts a vector of `n` floating point numbers into an exact rational vector of
 
 **Returns** A rational vector of big integers
 
+#### `require('rat-vec/is-vec')(v)`
+Test if `v` is a rat-vec
+
 #### `var v = require('rat-vec/to-float')(r)`
 Rounds a vector of big-rats into a
 
