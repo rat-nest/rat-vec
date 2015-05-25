@@ -1,6 +1,6 @@
 {
   "name": "rat-vec",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Exact rational vector arithmetic",
   "main": "index.js",
   "scripts": {
