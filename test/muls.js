@@ -1,7 +1,7 @@
 var test = require('tape');
-var equal = require('../equal')
+var equal = require('../equals')
 var muls = require('../muls')
-var frac = require('../scalar')
+var frac = require('big-rat')
 var rv = require('../index')
 
 test('muls: 1/5 * 0.5', function(t) {

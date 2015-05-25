@@ -1,5 +1,5 @@
 var test = require('tape');
-var equal = require('../equal')
+var equal = require('../equals')
 var rv = require('../index');
 
 test('(1/5) == 1/5', function(t) {

@@ -7,13 +7,11 @@ var add = require('../add')
 var float = require('../to-float');
 
 tape('check addition', function(t) {
-
   t.ok(equal(
     add(
       rv([1,2]),
       rv([1,3])),
     rv([2,5])))
-
 
   t.end()
 })

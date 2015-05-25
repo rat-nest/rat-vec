@@ -49,4 +49,3 @@ test('cmp mixed [1, -1]', function(t) {
   t.deepEqual(cmp(a, b), [1, -1], '[1, -1]');
   t.end();
 });
-

@@ -2,7 +2,7 @@
 
 var tape = require('tape')
 var rv = require('../index')
-var equal = require('../equal')
+var equal = require('../equals')
 var sub = require('../sub')
 
 tape('subtract', function(t) {

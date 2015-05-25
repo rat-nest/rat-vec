@@ -2,7 +2,7 @@
 
 var tape = require('tape')
 var rv = require('../index')
-var equal = require('../equal')
+var equal = require('../equals')
 var max = require('../max')
 
 tape('2d max (positive)', function(t) {
@@ -40,4 +40,3 @@ tape('2d max (zero)', function(t) {
 
   t.end()
 });
-
