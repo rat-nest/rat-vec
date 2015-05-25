@@ -5,5 +5,5 @@ var bnrecip = require('big-rat/recip')
 module.exports = recip
 
 function recip(a) {
-  return v.map(bnrecip)
+  return a.map(bnrecip)
 }
