@@ -1,14 +1,14 @@
 'use strict'
 
-module.exports = compare
+var bncmp = require('big-rat/cmp')
 
-function compare(a, b) {
-  var n = a.length-1
+module.exports = cmp
+
+function cmp(a, b) {
+  var n = a.length
   var r = new Array(n)
-  var aw = a[n]
-  var bw = b[n]
-  for(var i=0; i<n; ++i) {
-    r[i] = a[i].mul(bw).cmp(b[i].mul(aw))
+    for(var i=0; i<n; ++i) {
+    r[i] = bncmp(a[i], b[i])
   }
   return r
 }

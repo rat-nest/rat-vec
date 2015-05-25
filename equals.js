@@ -1,13 +1,13 @@
 'use strict'
 
+var bnequal = require('big-rat/equals')
+
 module.exports = equal
 
 function equal(a, b) {
-  var n = a.length-1
-  var wa = a[n]
-  var wb = b[n]
+  var n = a.length
   for(var i=0; i<n; ++i) {
-    if(a[i].mul(wb).cmp(b[i].mul(wa))) {
+    if(!bnequal(a[i], b[i])) {
       return false
     }
   }

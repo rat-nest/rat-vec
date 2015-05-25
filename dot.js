@@ -1,15 +1,16 @@
 'use strict'
 
-var rationalize = require('./lib/rationalize')
+var rat = require('big-rat')
+var mul = require('big-rat/mul')
+var add = require('big-rat/add')
 
 module.exports = dot
 
 function dot(a, b) {
+  var s = rat(0)
   var n = a.length
-  var s = a[0].mul(b[0])
-  for(var i=1; i<n-1; ++i) {
-    s = s.add(a[i].mul(b[i]))
+  for(var i=0; i<n; ++i) {
+    s = add(s, mul(a[i], b[i]))
   }
-  var r = [s, a[n-1].mul(b[n-1])]
-  return rationalize(r)
+  return s
 }
