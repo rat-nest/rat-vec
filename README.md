@@ -33,63 +33,44 @@ npm i rat-vec
 
 # API
 
+A `rat-vec` is an array of [`big-rat`s](https://github.com/rat-nest/big-rat).
+
 #### `var r = require('rat-vec')(v)`
 Converts a vector of `n` floating point numbers into an exact rational vector of `n+1` big ints.
 
-* `v` is a vector of floats, rationals or strings
+* `v` is a vector of floats, `big-rat`s or strings
 
 **Returns** A rational vector of big integers
-
-
-#### `var r = require('rat-vec/vec')(v)`
-Converts a vector of `n` floating rationals into an exact rational vector of `n+1` big ints.
-
-You can create rational number from floating point number with the `scalar` function below.
-
-* `v` is a vector of rationals
-
-**Returns** A rational vector of big integers
-
-#### `var s = require('rat-vec/scalar')(numer, denom)`
-Constructs a rational scalar
-
-* `numer` is the numerator
-* `denom` is the denominator
-
-**Returns** A rational number encoded as a pair of bignumbers
 
 #### `var v = require('rat-vec/to-float')(r)`
-Round a rational vector of big integers into an approximate vector of floats.
+Rounds a vector of big-rats into a
 
-* `r` is a vector of `n+1` big integers
+* `r` is a vector of `n` big integers
 
 **Returns** A vector of `n` floats representing the closest representable vector
 
 #### `var s = require('rat-vec/add')(a, b)`
-Performs per-component vector addition on `a` and `b`
 
-* `a` is a rational vector
-* `b` is a rational vector
-
-**Returns** The sum of `a` and `b`
+**Returns** The vector sum of `a` and `b`
 
 #### `var d = require('rat-vec/sub')(a, b)`
-Performs per-component vector subtraction on `a` and `b`
 
-* `a` is a rational vector
-* `b` is a rational vector
-
+**Returns** The vector difference of `a` and `b`
 
 #### `var f = require('rat-vec/dot')(a, b)`
-Computes the dot product of `a` and `b` returning a 1d rational vector.
+
+**Returns** The dot product of `a` and `b`
 
 #### `var v = require('rat-vec/muls')(a, s)`
-Multiplies a rat vec by a scalar or rat (e.g. `require('rat-vec')([1/2])`)
+
+**Returns** The scalar product of `a` and `s`, where `s` is a float, big-rat or string
 
 #### `var v = require('rat-vec/divs')(a, s)`
-Divides a rat vec by a scalar or rat (e.g. `require('rat-vec')([1/2])`)
+
+**Returns** `a` divided by the scalar `s`
 
 #### `var lerp = require('rat-vec/lerp')(a, b, t)`
+
 Linearly interpolate between `a` and `b` with parameter `t`
 
 #### `var c = require('rat-vec/cmp')(a, b)`
@@ -107,22 +88,17 @@ Computes the component-wise minimum of `a` and `b`
 #### `var p = require('rat-vec/mul')(a, b)`
 Computes the component-wise product of `a` and `b`
 
-#### `var r = require('rat-mul/recip')(a)`
+#### `var r = require('rat-vec/recip')(a)`
 Computes the component-wise reciprocal of `a`
 
-#### `var q = require('rat-mul/div')(a, b)`
+#### `var q = require('rat-vec/div')(a, b)`
 Computes the component-wise quotient of `a` and `b`
 
-#### `var s = require('rat-vec/get')(v, i)`
-Returns the `i`th component of `v`
+#### `var n = require('rat-vec/neg')(x)`
+Computes the additive inverse of `x`
 
-#### `var v = require('rat-vec/set')(v, i, s)`
-Returns a copy of `v` whose `i`th component is `s`
-
-# TODO
-
-* More testing
-* Other functions?
+#### `var n = require('rat-vec/abs')(x)`
+Computes the component-wise absolute value of `x`
 
 # Credits
 
