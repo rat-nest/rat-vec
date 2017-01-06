@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/rat-nest/rat-vec#readme",
   "dependencies": {
-    "big-rat": "^1.0.0"
+    "big-rat": "^1.0.3"
   },
   "devDependencies": {
     "tape": "^4.0.0"
